@@ -1,0 +1,24 @@
+.header {
+    background-color: rgb(161, 102, 47);
+    padding: 1rem;
+}
+
+.header__title {
+    color: white;
+    font-size: 2.5rem;
+    text-decoration: none;
+}
+
+.header__nav {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    text-align: center;
+    margin-left: 5em;
+}
+
+.header__link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
