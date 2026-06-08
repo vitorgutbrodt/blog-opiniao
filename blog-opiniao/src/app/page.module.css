@@ -23,6 +23,10 @@
   text-decoration: none;
 }
 
+.page__link {
+  text-decoration: none;
+}
+
 .page__button:hover {
   background-color: rgb(255, 51, 0);
   border-color: rgb(255, 51, 0);

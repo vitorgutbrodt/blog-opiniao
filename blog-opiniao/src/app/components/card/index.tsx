@@ -13,11 +13,11 @@ const Card = ({artigo} : Props) => {
         <div className={styles.card} key={id}>            
             <Image src={imagem} alt={`Foto de ${título}`} width={300} height={200} className={styles.card__image}/>
             <Link className={styles.card__name} href={link}>
-                <h3>{título}</h3>
-                <h4>{autor}</h4>
-            </Link>            
+                <h3>{título}</h3>                
+            </Link>        
+                <h4 className={styles.card__autor}>{autor}</h4>    
             <p className={styles.card__text}>{texto}</p>
-            <p>{data}</p>            
+            <p className={styles.card__date}>{data}</p>            
         </div>
     )
 }

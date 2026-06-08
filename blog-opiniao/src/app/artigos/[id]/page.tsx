@@ -25,12 +25,14 @@ export default async function ArtigoPage({
 
   return (
     <main>
-      <Link href="/mais-lidos" className={styles.link}>
+      <Link href="/artigos" className={styles.link}>
          <button className={styles.page__returnbutton}>VOLTAR</button>
       </Link>      
       <Title title={artigo.título} />
       <Image src={artigo.imagem} alt={`Foto de ${artigo.título}`} width={600} height={400} className={styles.page__image} />
-      <p className={styles.page__text}>{artigo.texto}</p>      
+      <p className={styles.page__text}>{artigo.texto}</p>
+      <p className={styles.page__autor}>{artigo.autor}</p>
+      <p className={styles.page__date}>{artigo.data}</p>      
     </main>
   );
 }

@@ -1,0 +1,91 @@
+.page__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: rgb(145, 3, 3);
+    margin: 1em;
+}
+
+.page__image {
+    width: 500px;
+    height: 300px;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+.page__text {
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: #333;
+    text-align: center;
+    margin: 1em;
+}
+
+.page__autor {
+    font-size: 1rem;
+    color: #777;
+    text-align: center;
+    margin: 1em;
+}
+
+.page__date {
+    font-size: 1rem;
+    color: #777;
+    text-align: center;
+    margin: 1em;
+}
+
+.page__button {
+    background-color: rgb(145, 3, 3);
+    color: white;
+    text-align: center;
+    padding: 2em;
+    display: block;
+    font-weight: bold;
+    margin-left: 40%;
+    margin-bottom: 1em;
+    width: 20%;
+    border: solid 1px rgb(145, 3, 3);
+    border-radius: 1em;
+}
+
+.page__button:hover {
+    background-color: rgb(255, 51, 0);
+    border-color: rgb(255, 51, 0);
+    cursor: pointer;
+}
+
+.page__returnbutton {
+    background-color: rgb(145, 3, 3);
+    color: white;
+    text-align: center;
+    padding: 0.5em;
+    font-weight: bold;
+    margin: 1em;    
+    border: solid 1px rgb(145, 3, 3);
+    border-radius: 1em;
+}
+
+.page__returnbutton:hover {
+    background-color: rgb(255, 51, 0);
+    border-color: rgb(255, 51, 0);
+    cursor: pointer;
+}
+
+@media (max-width: 480px) { /* Para celulares */
+    .page__text {
+        font-size: 1.2rem;
+        margin: 1em;
+    }
+
+    .page__button {
+        padding: 1.5em;
+        width: 50%;
+        margin-left: 25%;
+    }
+
+    .page__image {
+        width: 100%;
+        height: auto;
+    }
+}
