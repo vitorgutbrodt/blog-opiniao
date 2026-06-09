@@ -1,0 +1,61 @@
+.page__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+}
+
+.page__input {
+    width: 50%;
+    padding: 0.5em;
+    margin: 1em;
+    font-size: 1.2rem;
+    border: solid 1px #ccc;
+    border-radius: 0.5em;
+}
+
+.page__textarea {
+    width: 50%;
+    height: 200px;
+    padding: 0.5em;
+    margin: 1em;
+    font-size: 1.2rem;
+    border: solid 1px #ccc;
+    border-radius: 0.5em;
+}
+
+.page__button {
+    background-color: rgb(145, 3, 3);
+    color: white;
+    text-align: center;
+    padding: 2em;
+    display: block;
+    font-weight: bold;    
+    margin-bottom: 1em;
+    width: 20%;
+    border: solid 1px rgb(145, 3, 3);
+    border-radius: 1em;
+}
+
+.page__button:hover {
+    background-color: rgb(255, 51, 0);
+    border-color: rgb(255, 51, 0);
+    cursor: pointer;
+}
+
+.page__returnbutton {
+    background-color: rgb(145, 3, 3);
+    color: white;
+    text-align: center;
+    padding: 0.5em;
+    font-weight: bold;
+    margin: 1em;    
+    border: solid 1px rgb(145, 3, 3);
+    border-radius: 1em;
+}
+
+.page__returnbutton:hover {
+    background-color: rgb(255, 51, 0);
+    border-color: rgb(255, 51, 0);
+    cursor: pointer;
+}

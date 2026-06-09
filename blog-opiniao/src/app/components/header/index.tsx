@@ -10,6 +10,9 @@ const Header = () => {
       <nav className={styles.header__nav}>
         <Link href="/" className={styles.header__link}>Início</Link>    
         <Link href="/artigos" className={styles.header__link}>Todos os Artigos</Link>
+        <Link href="/novo-artigo" className={styles.header__link}>
+        <button className={styles.header__button}>Novo Artigo</button>
+        </Link>
       </nav>
     </header>
   )
