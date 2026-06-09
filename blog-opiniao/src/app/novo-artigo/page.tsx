@@ -3,6 +3,7 @@
 import styles from "./page.module.css";
 import Link from "next/link";
 import Title from "@/app/components/title";
+import { API_URL } from "@/lib/api/axios";
 
 export default function NovoArtigo() {
 
@@ -60,9 +61,7 @@ export default function NovoArtigo() {
             <label htmlFor="imagem" className={styles.page__label}>Imagem:</label>
             <input type="url" id="imagem" name="imagem" className={styles.page__input} />
 
-            <button type="submit" className={styles.page__button}>
-                Criar Artigo
-            </button>
+            <button type="submit" className={styles.page__button}>PUBLICAR</button>
         </form>
         </>
     );

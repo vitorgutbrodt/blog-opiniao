@@ -1,11 +1,11 @@
-import Image from "next/image";
 import styles from "./page.module.css";
-import Title from "@/app/components/title";
 import Grid from "@/app/components/grid";
 import Link from "next/link";
-import {artigos} from "@/lib/artigos";
+import { getArtigos } from "@/lib/api/crudcrud"
 
-export default function ArtigosPage() {
+export default async function ArtigosPage() {
+  const artigos = await getArtigos();
+
   return (
     <>
     <Link href="/" className={styles.link}>
