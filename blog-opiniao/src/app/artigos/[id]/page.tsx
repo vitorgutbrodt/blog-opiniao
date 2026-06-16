@@ -26,7 +26,7 @@ export default async function ArtigoPage({
   return (
     <main>
       <Link href="/artigos" className={styles.link}>
-         <button className={styles.page__returnbutton}>VOLTAR</button>
+        <button className={styles.page__returnbutton}>VOLTAR</button>
       </Link>      
       <Title title={artigo.título} />
       <Image src={artigo.imagem} alt={`Foto de ${artigo.título}`} width={600} height={400} className={styles.page__image} />

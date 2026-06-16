@@ -1,13 +1,7 @@
 import { Artigo } from "@/types/types";
-import { API_URL } from "./axios";
-
-type Data = {
-    result: Artigo[];
-}
+import { API_SERVER } from "./axios-server";
 
 export const getArtigos = async () => {
-    
-    const response = await API_URL.get<Data>("/artigos");
-    return response.data.result;
-
-    }
+  const response = await API_SERVER.get<Artigo[]>("/artigos");
+  return response.data;
+};

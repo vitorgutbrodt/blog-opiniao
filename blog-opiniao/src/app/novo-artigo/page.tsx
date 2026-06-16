@@ -7,37 +7,31 @@ import { API_URL } from "@/lib/api/axios";
 
 export default function NovoArtigo() {
 
-    async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-        event.preventDefault();
+async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
 
-        const formData = new FormData(event.currentTarget);
+    const form = event.currentTarget;
 
-        const artigo = {
-            titulo: formData.get("titulo"),
-            autor: formData.get("autor"),
-            data: formData.get("data"),
-            texto: formData.get("texto"),
-            imagem: formData.get("imagem"),
-        };
+    const formData = new FormData(form);
 
-        try {
-            const response = await fetch(API_URL, {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(artigo),
-            });
+    const artigo = {
+        titulo: formData.get("titulo"),
+        autor: formData.get("autor"),
+        data: formData.get("data"),
+        texto: formData.get("texto"),
+        imagem: formData.get("imagem"),
+    };
 
-            const data = await response.json();
+    try {
+        const response = await API_URL.post("/artigos", artigo);
 
-            console.log(data);
+        console.log("Artigo criado:", response.data);
 
-            event.currentTarget.reset();
-        } catch (error) {
-            console.error("Erro ao criar artigo:", error);
-        }
+        form.reset();
+    } catch (error) {
+        console.error("Erro ao criar artigo:", error);
     }
+}
 
     return (
         <>
