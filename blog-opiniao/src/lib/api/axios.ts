@@ -1,6 +1,5 @@
 import axios from "axios";
 
-console.log("Estou no:", typeof window === "undefined" ? "SERVER" : "CLIENT");
 console.log("NEXT_PUBLIC_CRUDCRUD_URL:", process.env.NEXT_PUBLIC_CRUDCRUD_URL);
 
 const API_URL = axios.create({

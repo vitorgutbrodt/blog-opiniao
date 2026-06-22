@@ -15,21 +15,35 @@ async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     const formData = new FormData(form);
 
     const artigo = {
-        titulo: formData.get("titulo"),
-        autor: formData.get("autor"),
-        data: formData.get("data"),
-        texto: formData.get("texto"),
-        imagem: formData.get("imagem"),
+        titulo: formData.get("titulo") as string,
+        autor: formData.get("autor") as string,
+        data: formData.get("data") as string,
+        texto: formData.get("texto") as string,
+        imagem: formData.get("imagem") as string,
     };
+
+    if (
+        !artigo.titulo.trim() ||
+        !artigo.autor.trim() ||
+        !artigo.data.trim() ||
+        !artigo.texto.trim() ||
+        !artigo.imagem.trim()
+    ) {
+        alert("Preencha todos os campos antes de publicar o artigo.");
+        return;
+    }
 
     try {
         const response = await API_URL.post("/artigos", artigo);
 
         console.log("Artigo criado:", response.data);
 
+        alert("Artigo publicado com sucesso!");
         form.reset();
+
     } catch (error) {
         console.error("Erro ao criar artigo:", error);
+        alert("Ocorreu um erro ao publicar o artigo.");
     }
 }
 

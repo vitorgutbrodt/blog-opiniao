@@ -8,12 +8,15 @@ type Props = {
 }
 
 const Card = ({artigo} : Props) => {
-    const { _id, título, autor, data, texto, imagem, link } = artigo;
+    const { _id, titulo, autor, data, texto, imagem} = artigo;
+
     return (
         <div className={styles.card} key={_id}>            
-            <Image src={imagem} alt={`Foto de ${título}`} width={300} height={200} className={styles.card__image}/>
-            <Link className={styles.card__name} href={link}>
-                <h3>{título}</h3>                
+            {imagem && (
+            <Image src={imagem} alt={`Foto de ${titulo}`} width={300} height={200} className={styles.card__image}/>
+        )}
+            <Link className={styles.card__name} href={`/artigos/${_id}`}>
+                <h3>{titulo}</h3>                
             </Link>        
                 <h4 className={styles.card__autor}>{autor}</h4>    
             <p className={styles.card__text}>{texto}</p>
