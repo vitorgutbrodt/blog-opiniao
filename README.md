@@ -38,7 +38,7 @@ npm install
 npm run dev
 ```
 
-5. Abra o navegador no endereço fornecido pelo terminal (geralmente `http://localhost:3000`).
+5. Abra o navegador no endereço fornecido pelo terminal. 
 
 ## Estrutura da aplicação
 
