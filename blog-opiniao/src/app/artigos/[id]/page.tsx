@@ -10,6 +10,25 @@ type Props = {
   }>;
 };
 
+const generateMetadata = async ({ params }: Props) => {
+
+const { id } = await params;
+
+  const artigo = await getArtigoById(id);
+
+  if (!artigo) {
+    return {
+      title: "Artigo não encontrado",
+    };
+  }
+
+  return {
+    title: artigo.titulo,
+    description: artigo.texto.substring(0, 160), 
+  };
+
+}
+
 export default async function ArtigoPage({ params }: Props) {
   const { id } = await params;
 

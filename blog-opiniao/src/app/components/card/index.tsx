@@ -10,7 +10,9 @@ type Props = {
 const Card = ({artigo} : Props) => {
     const { _id, titulo, autor, data, texto, imagem} = artigo;
 
-    return (
+    const resume = texto?.length >= 256 ? `${texto.substring(0, 256)}...` : texto;
+
+    return ( 
         <div className={styles.card} key={_id}>            
             {imagem && (
             <Image src={imagem} alt={`Foto de ${titulo}`} width={300} height={200} className={styles.card__image}/>
@@ -19,7 +21,7 @@ const Card = ({artigo} : Props) => {
                 <h3>{titulo}</h3>                
             </Link>        
                 <h4 className={styles.card__autor}>{autor}</h4>    
-            <p className={styles.card__text}>{texto}</p>
+            <p className={styles.card__text}>{resume}</p>
             <p className={styles.card__date}>{data}</p>            
         </div>
     )

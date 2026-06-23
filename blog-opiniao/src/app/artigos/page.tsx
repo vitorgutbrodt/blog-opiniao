@@ -3,6 +3,8 @@ import Grid from "@/app/components/grid";
 import Link from "next/link";
 import { getArtigos } from "@/lib/api/crudcrud"
 
+export const dynamic = "force-dynamic";
+
 export default async function ArtigosPage() {
   const artigos = await getArtigos();
 
