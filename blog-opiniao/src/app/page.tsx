@@ -5,8 +5,6 @@ import Title from "@/app/components/title";
 import Grid from "@/app/components/grid";
 import { getArtigos } from "@/lib/api/crudcrud"
 
-export const dynamic = "force-static";
-
 export default async function Home() {
   const artigos = await getArtigos();
 
@@ -14,7 +12,7 @@ export default async function Home() {
 
   return (
     <>    
-    <p className={styles.page__text}>O Blog Opinião é um algoritmo criado para fins de estudo em um curso de front-ent através da EBAC. Supostamente esse seria o modelo para um blog de diversos tipos de artigos. </p>
+    <p className={styles.page__text}>O Blog Opinião é uma aplicação criada para fins de estudo em um curso de front-ent através da EBAC. Supostamente esse seria o modelo para um blog de diversos tipos de artigos. </p>
     <Title title="Artigos Mais Lidos:" />
     <Grid artigos={destaques}/>     
     <Link href="/artigos" className={styles.page__link}>
