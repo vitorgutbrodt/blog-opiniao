@@ -42,7 +42,7 @@ npm run dev
 
 ## Estrutura da aplicação
 
-- A página inicial apresenta os 4 artigos mais recentes e utiliza geração estática, proporcionando um carregamento mais rápido;
+- A página inicial apresenta os 4 artigos mais recentes;
 - A página "Todos os artigos" possui comportamento dinâmico, permitindo a exibição de todos os conteúdos cadastrados;
 - A página "Novo artigo" permite o cadastro de novas publicações na API externa.
 

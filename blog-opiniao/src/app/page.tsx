@@ -8,7 +8,7 @@ import { getArtigos } from "@/lib/api/crudcrud"
 export default async function Home() {
   const artigos = await getArtigos();
 
-  const destaques = artigos.slice(0, 4); // Seleciona os 4 primeiros artigos como destaques
+  const destaques = artigos.slice(-4).reverse(); // pega os 4 artigos mais recentes e inverte a ordem para exibir do mais recente para o mais antigo
 
   return (
     <>    

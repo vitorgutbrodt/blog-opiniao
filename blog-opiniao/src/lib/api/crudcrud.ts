@@ -1,5 +1,5 @@
 import type Artigo  from "@/types/types";
-import { API_SERVER } from "./axios-server";
+import API_SERVER from "./axios-server";
 import { API_URL } from "./axios";
 
 export const getArtigos = async () => {
