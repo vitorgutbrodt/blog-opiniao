@@ -4,6 +4,8 @@ import styles from "./page.module.css";
 import Link from "next/link";
 import { getArtigoById } from "@/lib/api/crudcrud";
 
+export const dynamic = "force-dynamic";
+
 type Props = {
   params: Promise<{
     id: string;
