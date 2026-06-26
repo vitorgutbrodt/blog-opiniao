@@ -1,5 +1,7 @@
 import axios from "axios";
 
-export const API_SERVER = axios.create({
+const API_SERVER = axios.create({
   baseURL: process.env.CRUDCRUD_URL,
 });
+
+export { API_SERVER };
