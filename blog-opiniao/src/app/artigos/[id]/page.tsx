@@ -12,7 +12,7 @@ type Props = {
   }>;
 };
 
-const generateMetadata = async ({ params }: Props) => {
+export async function generateMetadata({ params }: Props) {
 
 const { id } = await params;
 
