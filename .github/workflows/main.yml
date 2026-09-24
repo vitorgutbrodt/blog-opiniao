@@ -21,9 +21,11 @@ jobs:
           node-version: '24'
 
       - name: instalação das dependencias
+        working-directory: ./blog-opiniao
         run: npm install
 
       - name: Rodar o build
+        working-directory: ./blog-opiniao
         run: npm run build
         env:
           CRUDCRUD_URL: ${{ vars.CRUDCRUD_URL}}
