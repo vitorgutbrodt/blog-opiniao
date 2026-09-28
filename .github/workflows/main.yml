@@ -4,7 +4,12 @@ name: Pipeline CI/CD
 on: 
   push:
     branches: 
-    - main    
+    - main
+
+    paths:
+    - "src/***"
+    - ".github/workflows"
+    
     workflow_dispatch: # habilitar o botão "RUN WORKFLOW"
     
 jobs:
