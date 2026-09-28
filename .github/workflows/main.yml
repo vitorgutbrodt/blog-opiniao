@@ -5,6 +5,9 @@ on:
   push:
     branches: 
     - main
+    paths: # só dispara se arquivos nessas pastas forem alterados
+    - "src/***"
+    - ".github/workflows"
     workflow_dispatch: # habilitar o botão "RUN WORKFLOW"
     
 jobs:
@@ -19,6 +22,8 @@ jobs:
         uses: actions/setup-node@v7
         with:
           node-version: '24'
+          cache: npm
+          cache-dependency-path: package-lock.json
 
       - name: instalação das dependencias
         working-directory: ./blog-opiniao
@@ -29,3 +34,26 @@ jobs:
         run: npm run build
         env:
           CRUDCRUD_URL: ${{ vars.CRUDCRUD_URL}}
+
+   tests:
+     runs-on: ubuntu-latest
+     steps:
+      - name: checkout do código
+        uses: actions/checkout@v6
+        
+      - name: instalação do node
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: rodar lint
+        working-directory: ./blog-opiniao
+        run: npm run lint
+
+      - name: verificar formatação
+        run: npm run format -- -- check
+
+      - name: rodar test
+        run: npm run test
