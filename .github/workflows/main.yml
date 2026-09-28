@@ -6,14 +6,13 @@ on:
     branches: 
     - main
 
-    paths:
+    paths: # Só dispara se essas pastas forem alteradas
     - "src/***"
     - ".github/workflows"
     
     workflow_dispatch: # habilitar o botão "RUN WORKFLOW"
     
-jobs:
-# Primeiro Job: Build
+jobs: # Primeiro Job: Build
   build:
     runs-on: ubuntu-latest
     steps:
