@@ -59,7 +59,7 @@ jobs:
 
       - name: verificar formatação
         working-directory: ./blog-opiniao
-        run: npm run format -- --check
+        run: npm run format:check
 
       - name: rodar test
         working-directory: ./blog-opiniao
