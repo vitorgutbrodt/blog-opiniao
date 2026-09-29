@@ -34,7 +34,7 @@ jobs: # Primeiro Job: Build
         working-directory: ./blog-opiniao
         run: npm run build
         env:
-   CRUDCRUD_URL: ${{ vars.CRUDCRUD_URL}}
+        CRUDCRUD_URL: ${{ vars.CRUDCRUD_URL}}
 
   tests:
      runs-on: ubuntu-latest
