@@ -10,7 +10,7 @@ on:
     - "src/***"
     - ".github/workflows"
     
-    workflow_dispatch: # habilitar o botão "RUN WORKFLOW"
+  workflow_dispatch: # habilitar o botão "RUN WORKFLOW"
     
 jobs: # Primeiro Job: Build
   build:
@@ -34,7 +34,7 @@ jobs: # Primeiro Job: Build
         working-directory: ./blog-opiniao
         run: npm run build
         env:
-        CRUDCRUD_URL: ${{ vars.CRUDCRUD_URL}}
+          CRUDCRUD_URL: ${{ vars.CRUDCRUD_URL}}
 
   tests:
      runs-on: ubuntu-latest
