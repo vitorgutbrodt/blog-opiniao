@@ -23,7 +23,12 @@
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "^9",
     "eslint-config-next": "16.2.7",
+<<<<<<< HEAD
     "prettier": "3.9.9",
+=======
+    "prettier": "^3.9.9",
+>>>>>>> 1a2038db3c0f03b514ee10d8dcb64dd8f5d76741
     "typescript": "^5"
   }
 }
+
