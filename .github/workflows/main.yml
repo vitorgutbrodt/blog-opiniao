@@ -7,7 +7,9 @@ on:
     - main
 
     paths: # Só dispara se essas pastas forem alteradas
-    - "src/**"
+    - "blog-opiniao/src/**"
+    - "blog-opiniao/package.json"
+    - "blog-opiniao/package-lock.json"
     - ".github/workflows/**"
     
   workflow_dispatch: # habilitar o botão "RUN WORKFLOW"
