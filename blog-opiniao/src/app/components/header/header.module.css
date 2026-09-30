@@ -1,40 +1,40 @@
 .header {
-    background-color: rgb(161, 102, 47);
-    padding: 1rem;
+  background-color: rgb(161, 102, 47);
+  padding: 1rem;
 }
 
 .header__title {
-    color: white;
-    font-size: 2.5rem;
-    text-decoration: none;
+  color: white;
+  font-size: 2.5rem;
+  text-decoration: none;
 }
 
 .header__nav {
-    margin-top: 1rem;
-    display: flex;
-    gap: 1rem;
-    text-align: center;
-    margin-left: 5em;
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  text-align: center;
+  margin-left: 5em;
 }
 
 .header__link {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
 }
 
 .header__button {
-    background-color: rgb(145, 3, 3);
-    color: white;
-    text-align: center;
-    padding: 0.5em;
-    font-weight: bold;
-    border: solid 1px rgb(145, 3, 3);
-    border-radius: 1em;
+  background-color: rgb(145, 3, 3);
+  color: white;
+  text-align: center;
+  padding: 0.5em;
+  font-weight: bold;
+  border: solid 1px rgb(145, 3, 3);
+  border-radius: 1em;
 }
 
 .header__button:hover {
-    background-color: rgb(255, 51, 0);
-    border-color: rgb(255, 51, 0);
-    cursor: pointer;
+  background-color: rgb(255, 51, 0);
+  border-color: rgb(255, 51, 0);
+  cursor: pointer;
 }

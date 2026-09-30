@@ -1,19 +1,17 @@
-import type Artigo  from "@/types/types";
+import type Artigo from "@/types/types";
 import { API_SERVER } from "./axios-server";
 
 export const getArtigos = async () => {
-    try {
+  try {
     const response = await API_SERVER.get<Artigo[]>("/artigos");
     return response.data;
-}
-    catch (error) {
+  } catch (error) {
     console.error("Erro ao buscar artigos:", error);
     return [];
   }
-
 };
 
 export const getArtigoById = async (_id: string) => {
-    const response = await API_SERVER.get<Artigo>(`/artigos/${_id}`);
-    return response.data;
+  const response = await API_SERVER.get<Artigo>(`/artigos/${_id}`);
+  return response.data;
 };

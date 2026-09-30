@@ -1,4 +1,4 @@
-.page__text {    
+.page__text {
   padding: 1rem;
   font-size: 1.5rem;
   color: #333;
@@ -41,7 +41,7 @@
 
   .page__button {
     padding: 1.5em;
-      width: 50%;
-      margin-left: 25%;
+    width: 50%;
+    margin-left: 25%;
   }
 }

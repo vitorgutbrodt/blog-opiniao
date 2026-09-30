@@ -13,8 +13,7 @@ type Props = {
 };
 
 export async function generateMetadata({ params }: Props) {
-
-const { id } = await params;
+  const { id } = await params;
 
   const artigo = await getArtigoById(id);
 
@@ -26,9 +25,8 @@ const { id } = await params;
 
   return {
     title: artigo.titulo,
-    description: artigo.texto.substring(0, 160), 
+    description: artigo.texto.substring(0, 160),
   };
-
 }
 
 export default async function ArtigoPage({ params }: Props) {
@@ -47,9 +45,7 @@ export default async function ArtigoPage({ params }: Props) {
   return (
     <main>
       <Link href="/artigos" className={styles.link}>
-        <button className={styles.page__returnbutton}>
-          VOLTAR
-        </button>
+        <button className={styles.page__returnbutton}>VOLTAR</button>
       </Link>
 
       <Title title={artigo.titulo} />
@@ -62,17 +58,11 @@ export default async function ArtigoPage({ params }: Props) {
         className={styles.page__image}
       />
 
-      <p className={styles.page__text}>
-        {artigo.texto}
-      </p>
+      <p className={styles.page__text}>{artigo.texto}</p>
 
-      <p className={styles.page__autor}>
-        {artigo.autor}
-      </p>
+      <p className={styles.page__autor}>{artigo.autor}</p>
 
-      <p className={styles.page__date}>
-        {artigo.data}
-      </p>
+      <p className={styles.page__date}>{artigo.data}</p>
     </main>
   );
 }
