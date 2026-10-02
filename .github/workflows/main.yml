@@ -40,6 +40,8 @@ jobs:
 
   tests:
     runs-on: ubuntu-latest
+    needs: build
+    
     steps:
       - name: checkout do código
         uses: actions/checkout@v6
@@ -78,12 +80,10 @@ jobs:
           cache: npm
           cache-dependency-path: blog-opiniao/package-lock.json
 
-      - name: instalação Vercel CLI
-        working-directory: ./blog-opiniao
+      - name: instalação Vercel CLI        
         run: npm install -g vercel@latest
 
       - name: deploy para Vercel
-        working-directory: ./blog-opiniao
         run: vercel --prod --yes --token=${{secrets.VERCEL_TOKEN}}
         env:
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
