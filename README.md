@@ -16,6 +16,9 @@ Aplicação web de um blog de artigos desenvolvida em Next.js, com foco na organ
 - JavaScript (ES6+)
 - HTML5
 - CSS3
+- Vitest
+- GitHub Actions
+- Vercel
 
 ## Como utilizar
 
@@ -38,7 +41,9 @@ npm install
 npm run dev
 ```
 
-5. Abra o navegador no endereço fornecido pelo terminal. 
+5. Abra o navegador no endereço: https://blog-opiniao-gv9fw5qfs-vitorsgutbrodt.vercel.app
+
+6. Utilize "Novo Artigo" para publicar um novo artigo ou clique em um artigo já publicado para o visualizar completamente. Em "todos os artigos" se encontram artigos além dos destaques. 
 
 ## Estrutura da aplicação
 
