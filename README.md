@@ -13,9 +13,10 @@ Aplicação web de um blog de artigos desenvolvida em Next.js, com foco na organ
 ## Tecnologias utilizadas
 
 - Next.js
-- JavaScript (ES6+)
+- React
+- TypeScript
 - HTML5
-- CSS3
+- CSS3 e CSS Modules
 - Vitest
 - GitHub Actions
 - Vercel
@@ -34,21 +35,36 @@ cd blog-opiniao
 ```bash
 npm install
 ```
+4. Configure as variáveis de ambiente necessárias para a conexão com a API externa, conforme a configuração do projeto.
 
-4. Execute o projeto:
+5. Execute o projeto:
 
 ```bash
 npm run dev
 ```
+6. Utilize "Novo Artigo" para publicar um novo artigo ou clique em um artigo já publicado para o visualizar completamente. Em "todos os artigos" se encontram artigos além dos destaques.
 
-5. Abra o navegador no endereço: https://blog-opiniao-gv9fw5qfs-vitorsgutbrodt.vercel.app
+## Testes e qualidade de código
 
-6. Utilize "Novo Artigo" para publicar um novo artigo ou clique em um artigo já publicado para o visualizar completamente. Em "todos os artigos" se encontram artigos além dos destaques. 
+Para executar as verificações disponíveis no projeto:
+
+```bash
+npm run lint
+npm run format:check
+npm test
+npm run build
+```
 
 ## Estrutura da aplicação
 
-- A página inicial apresenta os 4 artigos mais recentes;
+- A página inicial apresenta os 4 artigos mais recentes em destaque;
 - A página "Todos os artigos" possui comportamento dinâmico, permitindo a exibição de todos os conteúdos cadastrados;
 - A página "Novo artigo" permite o cadastro de novas publicações na API externa.
 
-Desenvolvido por João Vitor Gutbrodt Projeto de estudo de React
+## Integração contínua
+O projeto utiliza GitHub Actions para automatizar as etapas de verificação e validação configuradas no pipeline. 
+A aplicação está hospedada na Vercel, no endereço: https://blog-opiniao-gv9fw5qfs-vitorsgutbrodt.vercel.app
+Consulte a aba Actions para acompanhar as execuções dos workflows.
+
+Desenvolvido por João Vitor Gutbrodt 
+Projeto de estudo de desenvolvimento front-end com React, Next.js e TypeScript
