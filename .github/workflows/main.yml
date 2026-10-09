@@ -5,12 +5,6 @@ on:
   push:
     branches: 
     - main
-
-    paths: # Só dispara se essas pastas forem alteradas
-    - "blog-opiniao/src/**"
-    - "blog-opiniao/package.json"
-    - "blog-opiniao/package-lock.json"
-    - ".github/workflows/**"
     
   workflow_dispatch: # habilitar o botão "RUN WORKFLOW"
     
@@ -64,6 +58,10 @@ jobs:
       - name: verificar formatação
         working-directory: ./blog-opiniao
         run: npm run format:check
+
+      - name: verificar testes
+        working-directory: ./blog-opiniao
+        run: npm test
       
   deploy:
     runs-on: ubuntu-latest
